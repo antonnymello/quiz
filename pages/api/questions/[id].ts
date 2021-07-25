@@ -1,6 +1,6 @@
 import questions from '../questionsBank';
 
-export default (req, res) => {
+const questionsId = (req, res) => {
   const id = +req.query.id;
 
   const uniqueQuestion = questions.filter((question) => question.id === id);
@@ -12,3 +12,5 @@ export default (req, res) => {
     return res.status(204).send();
   }
 };
+
+export default questionsId;
