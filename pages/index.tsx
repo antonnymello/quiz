@@ -4,7 +4,7 @@ import AnswerModel from '../model/answer';
 import QuestionModel from '../model/question';
 import { useRouter } from 'next/dist/client/router';
 
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = 'https://qaquiz.vercel.app/api';
 
 export default function Home() {
   const router = useRouter();
