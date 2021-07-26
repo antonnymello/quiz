@@ -6,3 +6,19 @@
   height: 100vh;
   font-size: 2rem;
 }
+
+@media screen and (max-width: 600px) and (max-height: 768px) {
+  .result {
+    margin-top: 35vh;
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-height: 800px) {
+  .result {
+    margin-top: 40vh;
+    height: fit-content;
+    width: fit-content;
+  }
+}
