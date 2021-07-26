@@ -23,7 +23,7 @@ const Quiz = (props: QuizProps) => {
       {props.question ? (
         <Question
           value={props.question}
-          answerTimeout={6}
+          answerTimeout={5}
           onResponse={onResponse}
           onTimeout={props.nextStep}
         />

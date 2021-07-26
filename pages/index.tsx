@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import Quiz from '../components/Quiz';
-import AnswerModel from '../model/answer';
-import QuestionModel from '../model/question';
 import { useRouter } from 'next/dist/client/router';
+import Head from 'next/head';
+
+import Quiz from '../components/Quiz';
+import QuestionModel from '../model/question';
 
 const BASE_URL = 'https://qaquiz.vercel.app/api';
 
@@ -64,14 +65,22 @@ export default function Home() {
     });
   };
 
-  return question ? (
-    <Quiz
-      question={question}
-      last={getNextQuestionId() === undefined}
-      answeredQuestion={answeredQuestion}
-      nextStep={nextStep}
-    />
-  ) : (
-    false
+  return (
+    <>
+      <Head>
+        <title>Quiz</title>
+      </Head>
+
+      {question ? (
+        <Quiz
+          question={question}
+          last={getNextQuestionId() === undefined}
+          answeredQuestion={answeredQuestion}
+          nextStep={nextStep}
+        />
+      ) : (
+        false
+      )}
+    </>
   );
 }

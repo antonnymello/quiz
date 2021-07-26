@@ -2,9 +2,9 @@
   display: flex;
   min-width: 500px;
   width: 80%;
-  height: 100px;
-  margin: 10px;
-  perspective: 1000px;
+  height: 5rem;
+  margin: 0.625rem;
+  perspective: 62.5rem;
 }
 
 .answerContent {
